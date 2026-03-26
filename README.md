@@ -55,20 +55,20 @@ Several features related to medal counts were created to facilitate analysis. Fo
 
 ## 🔎 Key Observations
 
-1. **Olympic Powerhouses**
+1. **Olympic Powerhouses**  
 Historically, a small group of countries has dominated the Olympic medal table, including United States, China, Russia / Soviet Union and Germany.
 
-2. **Sport Specialization**
+2. **Sport Specialization**  
 Leading Olympic nations tend to specialize in specific sports disciplines, investing resources strategically in areas where they have competitive advantages.
 
-3. **GDP and Population**
+3. **GDP and Population**  
 The analysis suggests several patterns:
 
 - Countries with high GDP per capita tend to perform well in the Olympic medal rankings.
 - Some countries achieve strong results despite lower economic resources, likely due to targeted sports investment.
 - Conversely, some wealthy nations obtain relatively few medals, suggesting that economic resources alone do not determine success.
   
-4. **Host Country Advantage**
+4. **Host Country Advantage**  
 A strong host country effect was observed. In most Olympic Games, the host nation significantly increases its medal count, likely due to factors such as:
 - home advantage
 - increased funding before the event
@@ -76,11 +76,11 @@ A strong host country effect was observed. In most Olympic Games, the host natio
 
 ---
 
-## 📈 Athlete Participation and Performance Over Time
+## 📈 Athlete Participation and Performance Over Time 
 Major historical events have significantly influenced Olympic participation and performance.
 Political conflicts, wars, and geopolitical tensions have directly impacted both the number of participating athletes and the competitive balance between nations.
 
-**Germany in the Olympic Games**  
+**Germany in the Olympic Games**    
 Germany’s Olympic history reflects a transition from a highly politicized sports system to a more balanced and sustainable model in the modern era.
 
 **USSR Performance**  
