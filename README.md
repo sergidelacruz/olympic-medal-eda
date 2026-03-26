@@ -8,18 +8,26 @@ The analysis explores how economic power, population, global events, and politic
 
 ## 📑 Table of Contents
 ---
-- [Introduction](#description)
 - [Research Questions](#-research-questions)
-- [Methodology](#%EF%B8%8F-methodology)
-- [Results](#-results)
-- [Key Insights](#-key-insights)
-- [Challenges](#%EF%B8%8F-challenges)
-- [Repository Structure](#-repository-structure)
-- [Tech Stack](#-tech-stack)
-- [My Contributions](#-results)
-- [Authors](#authors)
+- [Data Source](#-data-source)
+- [Data Preprocessing](#-data-preprocessing)
+- [Key Observations](#-key-observations)
+- [Athlete Participation and Performance Over Time](#-athlete-participation-and-performance-over-time)
+- [Future Research Directions](#future-research-directions)
+- [Tech Stack](#%EF%B8%8F-tech-stack)
+- [My Contributions](#my-contributions)
+- [Authors](#-authors)
 
 ---
+
+## 🎯 Research Questions
+
+The project aims to explore several key questions:
+
+- How has Olympic participation evolved over time?
+- Which countries have historically dominated the Olympic medal table?
+- How do economic and demographic factors relate to Olympic success?
+- How have historical events influenced Olympic performance?
 
 ## 📊 Data Source
 
@@ -30,6 +38,8 @@ The dataset was obtained from [Kaggle](https://www.kaggle.com/datasets/heesoo37/
 **Temporal variables**: Year, Games  
 **Binary variables**: Has_Medal, Team_Event, Single_Event 
 
+---
+
 ## 🧹 Data Preprocessing
 **Missing Values**  
 Several preprocessing steps were applied to ensure data consistency:  
@@ -38,15 +48,7 @@ Several preprocessing steps were applied to ensure data consistency:
 - *Incomplete dates*: Partial date information was combined where possible to reduce missing values.  
 - *Athlete characteristics*: Age, height, and weight contain many missing values. Since these variables were not the main focus of the analysis, missing values were replaced using the median value by gender.  
 
-## 🎯 Objectives
-
-The project aims to explore several key questions:
-
-- How has Olympic participation evolved over time?
-- Which countries have historically dominated the Olympic medal table?
-- How do economic and demographic factors relate to Olympic success?
-- How have historical events influenced Olympic performance?
-
+**Features Transforming**  
 ---
 
 ## 🔎 Key Observations
@@ -115,7 +117,7 @@ Potential extensions of this analysis include:
 
 ---
 
-## ⚙️ Technologies Used
+## ⚙️ Tech Stack
 
 **Programming**  
 - Python
@@ -133,7 +135,19 @@ Potential extensions of this analysis include:
 
 ---
 
-## 👥 Credits
+## My Contributions
+ 
+In this group project, I was primarily responsible for the dataset preparation and initial analytical insights.
+
+My main contributions included:
+
+• **Data preparation and preprocessing**: cleaning the dataset, handling missing values, and preparing the variables used for the analysis.  
+• **Data structuring and feature preparation** to enable consistent exploratory analysis.  
+• **Exploratory data analysis focused on key observations**, including identifying patterns related to Olympic powerhouses, sport specialization, GDP and population relationships, and the host country advantage.
+
+---
+
+## 👥 Authors
 
 Pablo Baro
 Nico Guitart
