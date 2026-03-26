@@ -48,8 +48,9 @@ Several preprocessing steps were applied to ensure data consistency:
 - *Incomplete dates*: Partial date information was combined where possible to reduce missing values.  
 - *Athlete characteristics*: Age, height, and weight contain many missing values. Since these variables were not the main focus of the analysis, missing values were replaced using the median value by gender.  
 
-**Features Transforming**
+**Features Transforming**  
 Several features related to medal counts were created to facilitate analysis. For example, team medals were initially counted per athlete, meaning a single team medal was recorded multiple times. This was adjusted so that each team medal is counted as one.
+
 ---
 
 ## 🔎 Key Observations
