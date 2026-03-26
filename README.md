@@ -1,85 +1,144 @@
-# Análisis Exploratorio de Datos (EDA): Medallero olímpico 
+# 🏅 Exploratory Data Analysis (EDA): Olympic Medal History
 
-Este proyecto muestra un **Análisis Exploratorio de Datos (EDA)** del historial de los Juegos Olímpicos, con el fin de estudiar la evolución de la participación de atletas y el medallero desde una perspectiva histórica y geopolítica. 
+This project presents an Exploratory Data Analysis (EDA) of the historical Olympic Games dataset, with the goal of studying the evolution of athlete participation and medal distribution from a historical and geopolitical perspective.
 
----
-
-## Contenidos
-- **Introducción**
-- **Metodología**
-- **Objetivos**
-- **Exploración general**
-- **Planteamiento de hipótesis**
-- **Análisis exploratorio de datos**
-- **Conclusiones**
-- **Lineas de investigación futuras**
-- **Conclusiones y Recomendaciones**
+The analysis explores how economic power, population, global events, and political contexts have influenced Olympic performance across different countries and time periods.
 
 ---
 
-## Fuente de Datos
-[Kaggle](https://www.kaggle.com/datasets/heesoo37/120-years-of-olympic-history-athletes-and-results).
-
-- **Variables categóricas**: `Sex`, `Country/NOC`, `Sport`, `Event`,`Medal`.
-- **Variables numéricas**: `Age`, `Height`, `Weight`, `ID`.
-- **Variables temporales**: `Year`, `Games`.
-- **Variables binarias**: `Has_Medal`, `Team_Event`,`Single_Event`.
-
-## Tratamiento de Datos
-- **Valores nulos**:
-  - Los valores nulos de las medallas asumimos que son aquellos atletas que no han ganado ninguna medalla en aquel evento. Como nos interesa mantener esta condición, los convertimos a “NoMl” (“No Medal”).
-  - Fechas incompletas se combinaron para reducir los valores nulos.
-  - Las variables Edad, Altura y Peso son numerosas, pero no las priorizamos para este análisis. Se sustiyueron los nulos por la mediana de cada variable diferenciando el sexo masculino y femenino.
+## 📑 Table of Contents
+---
+- [Introduction](#description)
+- [Research Questions](#-research-questions)
+- [Methodology](#%EF%B8%8F-methodology)
+- [Results](#-results)
+- [Key Insights](#-key-insights)
+- [Challenges](#%EF%B8%8F-challenges)
+- [Repository Structure](#-repository-structure)
+- [Tech Stack](#-tech-stack)
+- [My Contributions](#-results)
+- [Authors](#authors)
 
 ---
 
-## Principales Observaciones
-1. **Potencias olímpicas**:
-   - **USA**, **China**, **Rusia** y **Alemania** dominan el medallero históricamente.
-2. **Deportes con más medallas**:
-   - Las principales potencias se especializan en deportes diferentes..
-3. **PIB y población**:
-   - Las grandes potencias medalleras suelen un alto PIB por capita.
-   - Hay países con un PIB relativamente menor pero con grandes resultados.
-   - Hay países con gran riqueza pero con pocas medallas.
-4. **Ventaja del anfitrión**:
-   - En casi todos los eventos, el país anfitrión han tenido un éxito rotundo en el medallero.
-5. **Participación  y rendimiento de los atletas a lo largo del tiempo**
-   - Los grandes acontecimientos históricos influyen directamente tanto en la participación como en el rendimiento deportivo de las principales potencias olímpicas.
-6. **Alemania en los JJOO**
-   -  Transición desde un modelo deportivo altamente politizado hacia un sistema más equilibrado y sostenible
-7. **URSS en los JJOO**
-   - Rendimiento consistente entre 90-125 medallas por olimpiada durante 1952 - 1976.
-9. **EEUU en los JJOO**
-    - EEUU muestra un crecimiento sostenido desde 1896 con picos anómalos en 1904 y 1984.
-11. **Comparación promedio URSS vs Rusia**
-    - Rusia sufre una gran caída de medallas tras disolución de la URSS.
-11. **Comparación URSS vs EUA**
-    - Los boicots de 1980 y 1984 marcarons la rivalidad entre ambos países durante la Guerra Fría.
-    - En competencia directa y equilibrada (sin boicots), la rivalidad era muy pareja con ligera ventaja soviética.
+## 📊 Data Source
+
+The dataset was obtained from [Kaggle](https://www.kaggle.com/datasets/heesoo37/120-years-of-olympic-history-athletes-and-results) and contains historical information on Olympic athletes, events, and medal results.
+
+**Categorical variables**: Sex, Country / NOC, Sport, Event, Medal  
+**Numerical variables**: Age, Height, Weight, Athlete ID  
+**Temporal variables**: Year, Games  
+**Binary variables**: Has_Medal, Team_Event, Single_Event 
+
+## 🧹 Data Preprocessing
+**Missing Values**  
+Several preprocessing steps were applied to ensure data consistency:  
+
+- *Medal values*: Missing medal values were interpreted as athletes who did not win a medal in the event. These values were replaced with “NoMedal” to preserve this information.  
+- *Incomplete dates*: Partial date information was combined where possible to reduce missing values.  
+- *Athlete characteristics*: Age, height, and weight contain many missing values. Since these variables were not the main focus of the analysis, missing values were replaced using the median value by gender.  
+
+## 🎯 Objectives
+
+The project aims to explore several key questions:
+
+- How has Olympic participation evolved over time?
+- Which countries have historically dominated the Olympic medal table?
+- How do economic and demographic factors relate to Olympic success?
+- How have historical events influenced Olympic performance?
 
 ---
 
-## Conclusiones principales
-- **Especialización deportiva**:  el éxito olímpico no depende únicamente de la riqueza, sino de cómo los países orientan sus recursos y programas deportivos.
-- **Guerra Mundiales**:  los grandes acontecimientos del siglo XX provocaron rupturas estructurales en la participación y el medallero, así como procesos de recuperación desiguales condicionados por sanciones, crisis económicas y problemas de localización.
-- **Rivalidades históricas**: durante la Guerra Fría, los Juegos Olímpicos actuaron como un escenario de rivalidad geopolítica, donde boicots y ausencias distorsionaron el medallero.
+## 🔎 Key Observations
+
+1. **Olympic Powerhouses**
+Historically, a small group of countries has dominated the Olympic medal table, including United States, China, Russia / Soviet Union and Germany.
+
+2. **Sport Specialization**
+Leading Olympic nations tend to specialize in specific sports disciplines, investing resources strategically in areas where they have competitive advantages.
+
+3. **GDP and Population**
+The analysis suggests several patterns:
+
+- Countries with high GDP per capita tend to perform well in the Olympic medal rankings.
+- Some countries achieve strong results despite lower economic resources, likely due to targeted sports investment.
+- Conversely, some wealthy nations obtain relatively few medals, suggesting that economic resources alone do not determine success.
+  
+4. **Host Country Advantage**
+A strong host country effect was observed. In most Olympic Games, the host nation significantly increases its medal count, likely due to factors such as:
+- home advantage
+- increased funding before the event
+- larger athlete delegations
 
 ---
 
-## Requisitos
-### Tecnologías utilizadas
-- **Python**: pandas, numpy, matplotlib, seaborn.
-- **Jupyter Notebook**: Visualización y análisis interactivo.
-- **Presentaciones**: Canva.
-- **Memoria**: Word y PDF.
+## 📈 Athlete Participation and Performance Over Time
+Major historical events have significantly influenced Olympic participation and performance.
+Political conflicts, wars, and geopolitical tensions have directly impacted both the number of participating athletes and the competitive balance between nations.
+
+**Germany in the Olympic Games**  
+Germany’s Olympic history reflects a transition from a highly politicized sports system to a more balanced and sustainable model in the modern era.
+
+**USSR Performance**  
+The Soviet Union achieved remarkably consistent Olympic results, typically winning between 90 and 125 medals per Olympic Games during the period 1952–1976.
+
+**United States Performance**  
+The United States shows a long-term upward trend in medal counts since the first modern Olympics in 1896, with notable peaks in 1904 and 1984, both hosted in the United States.
+
+**USSR vs Russia**  
+Following the dissolution of the Soviet Union, Russia experienced a significant decline in medal counts compared to the Soviet era.
+
+**USSR vs USA Rivalry**  
+During the Cold War, the Olympic Games became a stage for geopolitical rivalry between the United States and the Soviet Union.
+The 1980 and 1984 Olympic boycotts significantly distorted the medal standings.
+When both countries competed directly without boycotts, the rivalry was extremely close, with a slight advantage for the Soviet Union in several editions.
+
+## 🧠 Main Conclusions
+**Sports specialization**  
+Olympic success is not determined solely by economic wealth. Countries that allocate resources strategically and invest in specific sports programs tend to perform better.
+
+**Impact of world events**  
+Major events such as the World Wars created structural disruptions in Olympic participation and medal distribution, followed by uneven recovery periods influenced by political sanctions, economic crises, and geopolitical changes.
+
+**Geopolitical rivalries**  
+During the Cold War, the Olympic Games served as a symbolic arena for geopolitical competition. Boycotts and political tensions significantly affected participation and medal outcomes.
 
 ---
 
-## Créditos
+## 🔮 Future Research Directions
 
-Pablo Baro, Nico Guitart y Sergi de la Cruz
+Potential extensions of this analysis include:
+- Investigating the relationship between GDP per capita and medal efficiency
+- Analyzing population size vs medal performance
+- Studying long-term specialization trends by country
+- Applying predictive models to estimate medal counts
 
-Bootcamp Data Science The Bridge
+---
+
+## ⚙️ Technologies Used
+
+**Programming**  
+- Python
+
+**Main libraries**  
+- Pandas
+- Numpy
+- Matplotlib
+- Seaborn
+  
+**Tools**  
+- Jupyter Notebook (data exploration and visualization)
+- Canva (presentations)
+- Word / PDF (project documentation)
+
+---
+
+## 👥 Credits
+
+Pablo Baro
+Nico Guitart
+Sergi de la Cruz
+
+**Bootcamp Data Science The Bridge**
 
 2025/26
